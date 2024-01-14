@@ -23,8 +23,6 @@ def find_nearest_neighbors(source_pc, target_pc, nearest_neigh_num):
 
 
 def icp(source, target):
-    source.paint_uniform_color([0.5, 0.5, 0.5])
-    target.paint_uniform_color([0, 0, 1])
     target_points = np.asarray(target.points)
     transform_matrix = np.asarray([[0.862, 0.011, -0.507, 0.5], [-0.139, 0.967, -0.215, 0.7], [0.487, 0.255, 0.835, -1.4], [0.0, 0.0, 0.0, 1.0]])
     source = source.transform(transform_matrix)
